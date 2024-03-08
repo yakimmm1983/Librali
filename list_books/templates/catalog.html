@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog</title>
+    <link rel= "stylesheet" href = "{% static 'css/stylesheet.css' %}" type = "text/css">
+</head>
+{% include "head.html" %}
+<body class="fon">
+    </form>
+        <form method = "post" action="{% url 'list' %}">
+        {% csrf_token %}
+        <button class="classic" type="submit">Классика</button>
+    </form>
+    <button class="journal" type="submit">Журналы</button>
+    <button class="history" type="submit">История мира</button>
+    <button class="spec" type="submit">Специальная литература</button>
+</body>
+
+</html>

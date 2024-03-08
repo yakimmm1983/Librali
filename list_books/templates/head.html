@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<header class="top-fone">
+    <small class="lable">Твоя библиотека</small>
+    <form method = "post" action="{% url 'redirect' %}">
+        {% csrf_token %}
+        <button class="main-button" type="submit">Главная</button>
+    </form>
+        <form method = "post" action="{% url 'catalog' %}">
+        {% csrf_token %}
+        <button class="catalog-button" type="submit">Каталог</button>
+    </form>
+    <button class="button-book" type="submit">Твоя книга</button>
+    <button class="button-favourites" type="submit">Избранное</button>
+</header>
+<body>
+
+</body>
+<footer class="down-fon">
+<div>
+    <small class="adres"> Наш адрес</small><br><br>
+    <small class="tel">Телефон: 77-77-77, 44-55-66</small><br><br>
+    <small class="my"> О нас</small>
+</div>
+</footer>
+</html>
