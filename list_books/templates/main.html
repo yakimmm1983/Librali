@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
     <link rel= "stylesheet" href = "{% static 'css/stylesheet.css' %}" type = "text/css">
 </head>
 {% include "head.html" %}
-<body>
-    <img class="img" src="{% static 'img/img.png' %}" alt="librali" >
+<body class="background-main">
+
+
     <button class="discuss" type="submit">Найти друзей или <br> поделиться мнением можете здесь</button>
+
 </body>
+<footer class="down-fon">
+    {% include "footer.html" %}
+</footer>
 
 </html>

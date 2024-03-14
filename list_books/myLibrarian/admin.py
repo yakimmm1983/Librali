@@ -1,3 +1,6 @@
 from django.contrib import admin
+from myLibrarian.models import *
 
-# Register your models here.
+admin.site.register(Book)
+admin.site.register(User)
+admin.site.register(Rent)

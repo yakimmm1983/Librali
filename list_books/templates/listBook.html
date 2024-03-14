@@ -7,9 +7,25 @@
     <link rel= "stylesheet" href = "{% static 'css/stylesheet.css' %}" type = "text/css">
 </head>
 {% include "head.html" %}
-<body>
-    <div>
-        <p></p>
+<body >
+    <div class="container">
+    {% for book in books %}
+        <div class="scroll">
+            <img src="{{ book.image }}" class="bookImg">
+    <h2>{{ book.author }}</h2>
+    <h3>{{ book.title }}</h3>
+    <p>{{ book.description }}</p>
+    <small>{{ book.status }}</small>
+    <small>{{ book.quantity</small>
+    <form action={% url 'form' %}>
+        <input type="submit" value="Забронировать" class="btn">
+    </form>
+        </div>
     </div>
+    {% endfor %}
+    <form action={% url 'catalog' %}>
+        <input type="submit" value="Перейти к каталогу"class="btn">
+    </form>
 </body>
+{% include "footer.html" %}
 </html>

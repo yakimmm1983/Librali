@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FormUser</title>
+</head>
+<body>
+    <h3>Введите свои данные:</h3>
+    <form method = "post" action="{% url 'list' %}">
+        {% csrf_token %}
+        <div>
+        {{ form.as_p }}
+        </div>
+        <button type="submit">Забронировать и перейти к списку</button>
+    </form>
+</body>
+</html>
