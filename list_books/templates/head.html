@@ -8,6 +8,11 @@
         {% csrf_token %}
         <button class="catalog-button" type="submit">Каталог</button>
     </form>
+    </form>
+        <form method = "post" action="{% url 'youBook' %}">
+        {% csrf_token %}
     <button class="button-book" type="submit">Твоя книга</button>
+    </form>
+
     <button class="button-favourites" type="submit">Избранное</button>
 </header>

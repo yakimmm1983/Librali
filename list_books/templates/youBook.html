@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tвоя книга</title>
+    <link rel= "stylesheet" href = "{% static 'css/stylesheet.css' %}" type = "text/css">
+</head>
+{% include "head.html" %}
+<body>
+<h1 class="H">Твои забронированые книги:</h1>
+<table class="root-table">
+    <tr>
+        <th class="row-table">Имя</th>
+        <th class="row-table">Название</th>
+        <th class="row-table">Описание</th>
+    </tr>
+
+
+    <tr>
+        <td class="row-table">{{ user }}</td>
+        <td class="row-table">{{ books }}</td>
+        <td class="row-table">{{ book.title }}</td>
+    </tr>
+
+</table>
+</body>
+
+</html>

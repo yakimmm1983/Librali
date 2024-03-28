@@ -236,3 +236,13 @@ background-size:cover;
     width: 200px;
     height:230px;
 }
+.H{
+    margin-top: 300px;
+}
+.root-table{
+    border: 1px solid gray;
+    width:50%;
+}
+.row-table{
+    border: 1px solid gray;
+}

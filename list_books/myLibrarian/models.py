@@ -21,6 +21,6 @@ class Rent(models.Model):
     rentStart = models.DateTimeField(null=True,blank=True)
     rentEnd = models.DateTimeField(null=True,blank=True)
     status = models.CharField(max_length=25,null=True,blank=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ManyToManyField(User)
     books = models.ManyToManyField(Book)
 
