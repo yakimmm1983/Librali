@@ -26,11 +26,13 @@ def CreateRent(userName,userPhone,bookId):
         user = User()
         user.name = userName
         user.cellPhoneNumber = userPhone
+        user.save()
     book = Book.objects.get(id = bookId)
     rent = Rent()
-    rent.user = user
-    rent.books = book
     rent.status = "Забронированно"
+    rent.save()
+    rent.user.add(user)
+    rent.books.add(book)
     rent.save()
 
 

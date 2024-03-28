@@ -1,6 +1,6 @@
 <header class="top-fone">
     <small class="lable">Твоя библиотека</small>
-    <form method = "post" action="{% url 'redirect' %}">
+    <form method = "post" action="{% url 'returnMain' %}">
         {% csrf_token %}
         <button class="main-button" type="submit">Главная</button>
     </form>

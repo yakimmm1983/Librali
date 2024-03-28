@@ -16,12 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myLibrarian.views import main,catalog,redirect,list,form,youBook,CreateRent
+from myLibrarian.views import main,catalog,returnMain,list,form,youBook,CreateRent
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main),
-    path('redirect/',redirect,name='redirect'),
+    path('returnMain/',returnMain,name='returnMain'),
     path('catalog/',catalog,name='catalog'),
     path('list/',list,name='list'),
     path('form/<int:bookId>/',form,name='form'),
